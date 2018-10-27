@@ -51,6 +51,20 @@
 		    <version>5.1.47</version>
 		</dependency>
 		
+		<dependency>
+	      <groupId>com.google.appengine</groupId>
+	      <artifactId>appengine-testing</artifactId>
+	      <version>1.3.2</version>
+	      <scope>test</scope>
+	    </dependency>
+	    
+	    <dependency>
+	      <groupId>com.google.appengine</groupId>
+	      <artifactId>appengine-api-stubs</artifactId>
+	      <version>1.3.2</version>
+	      <scope>test</scope>
+	    </dependency>
+		
 	</dependencies>
 
 	<build>
@@ -64,12 +78,7 @@
 		     <groupId>com.google.cloud.tools</groupId>
 		     <artifactId>appengine-maven-plugin</artifactId>
 		     <version>1.3.2</version>
-		     <configuration>
-		       <stage.enableJarSplitting>true</stage.enableJarSplitting>
-		       <deploy.stopPreviousVersion>true</deploy.stopPreviousVersion>
-		       <cloudSdkPath>/google/google-cloud-sdk</cloudSdkPath>
-		     </configuration>
-  </plugin>
+			</plugin>
 		</plugins>
 	</build>
 </project>
