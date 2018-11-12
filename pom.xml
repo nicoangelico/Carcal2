@@ -85,6 +85,12 @@
 	                <useSystemClassLoader>false</useSystemClassLoader>
 	            </configuration>
 	        </plugin>	
+	        
+	        <plugin>
+	            <groupId>com.google.appengine</groupId>
+	            <artifactId>appengine-maven-plugin</artifactId>
+	            <version>1.9.9</version>
+	        </plugin>
 					
 		</plugins>
 		<finalName>carcal-spring-boot</finalName>
