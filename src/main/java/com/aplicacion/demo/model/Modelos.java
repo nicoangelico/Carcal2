@@ -13,16 +13,13 @@ public class Modelos {
 	private long modeloid;
     private String nombre;
     private long marca;
+    private double consumoRuta;
+    private double consumoCiudad;
+    private int combustible;   		//1. nafta, 2 diesel, 3 hibirdo
     
     public Modelos() {
     	
     }
-
-	public Modelos(int modeloid, String nombre, int marca) {
-		this.modeloid = modeloid;
-		this.nombre = nombre;
-		this.marca = marca;
-	}
 	
 	public long getModeloid() {
 		return modeloid;
@@ -42,7 +39,30 @@ public class Modelos {
 	public void setMarca(long marca) {
 		this.marca = marca;
 	}
-    
-    
+
+	public int getCombustible() {
+		return combustible;
+	}
+
+	public void setCombustible(int combustible) {
+		this.combustible = combustible;
+	}
+
+	public double getConsumoRuta() {
+		return consumoRuta;
+	}
+
+	public void setConsumoRuta(double consumoRuta) {
+		this.consumoRuta = consumoRuta;
+	}
+
+	public double getConsumoCiudad() {
+		return consumoCiudad;
+	}
+
+	public void setConsumoCiudad(double consumoCiudad) {
+		this.consumoCiudad = consumoCiudad;
+	}
+       
 	
 }

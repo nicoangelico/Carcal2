@@ -1,6 +1,8 @@
 package com.aplicacion.demo.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,8 +23,10 @@ public class MarcasController {
   
     @RequestMapping(value="/marcas", method=RequestMethod.GET)
     @ResponseBody
-	public List<Marcas> getAllMarcas(){
-		return marcasService.getAllMarcas();
+	public Map<String, List<Marcas>> getAllMarcas(){
+    	Map<String, List<Marcas>> response = new HashMap<String, List<Marcas>>();
+    	response.put("marcas", marcasService.getAllMarcas());
+    	return response;
 	}
     
     @RequestMapping(value="/marcas/{id}", method=RequestMethod.GET)
@@ -31,5 +35,4 @@ public class MarcasController {
 		return marcasService.getMarcasById(id);
 	}
     
-    //revivi!!
 }
